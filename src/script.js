@@ -20,12 +20,15 @@ const geometry = new THREE.BoxGeometry(50,10,50);
 
 //const texture = new THREE.TextureLoader().load( '../img/desertUVmap.jpg');
 
-const light = new THREE.AmbientLight(0x404040,0.5);
+const light = new THREE.AmbientLight(0x404040,3);
+const pointLight = new THREE.PointLight(0x404040,10)
+pointLight.position.set(40,45,40)
 //const material = new THREE.MeshBasicMaterial( { material:texture } );
-const material = new THREE.MeshBasicMaterial( { } );
+const material = new THREE.MeshPhysicalMaterial( { } );
+
 
 const plane = new THREE.Mesh( geometry, material );
-scene.add(light);
+scene.add(pointLight);
 scene.add( plane );
 
 
