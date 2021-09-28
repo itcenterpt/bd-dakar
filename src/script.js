@@ -1,5 +1,6 @@
-import './style.css'
+
 import * as THREE from 'three'
+import { PointLightShadow } from 'three';
 
 const scene = new THREE.Scene();
 
@@ -14,10 +15,10 @@ const scene = new THREE.Scene();
 //Perspective camera
 
 
-
-
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setSize( window.innerWidth, window.innerHeight);
+renderer
+
 document.body.appendChild( renderer.domElement );
 
 //Lights
@@ -31,13 +32,17 @@ const material = new THREE.MeshPhysicalMaterial( { } );
 
 const plane = new THREE.Mesh( geometry, material );
 plane.position.set(0,0,0);
+plane.material.color.setHex(0xff9a00);
 
 //Player
 const SphereGeometry = new THREE.BoxGeometry(5,5,5)
 const sphereMaterial = new THREE.MeshPhysicalMaterial( { } );
 
+
 const sphere = new THREE.Mesh( SphereGeometry,sphereMaterial);
+sphere.material.color.setColorName('red');
 sphere.position.set(0,10,0);
+
 
 
 const camera = new THREE.PerspectiveCamera( 100,window.innerWidth /window.innerHeight, 1, 1000 );
@@ -55,6 +60,7 @@ scene.add(sphere);
 
 function animate() {
 	requestAnimationFrame( animate );
+
 	renderer.render( scene, camera );
 }
 animate();
