@@ -1,2 +1,12 @@
 node_modules
-*dist/
+Assets/
+bundler/
+dist/
+img/
+Library/
+Logs/
+obj/
+Packages/
+ProjectSettings/
+Temp/
+UserSettings/
