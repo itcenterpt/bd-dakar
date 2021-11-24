@@ -53,9 +53,10 @@
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayHeadMover.cs" />
+    <Compile Include="Assets\Scripts\PlayHeadMover.cs" />
     <Compile Include="Assets\WebGLSupport\WebGLInput\WebGLInput.cs" />
     <Compile Include="Assets\WebGLSupport\WebGLInput\Wrapper\WrappedInputField.cs" />
+    <Compile Include="Assets\Scripts\MobileUIAdapter.cs" />
     <Compile Include="Assets\Scripts\onTriggerCallQuestion.cs" />
     <Compile Include="Assets\Scripts\RearLookAt.cs" />
     <Compile Include="Assets\Bikepackage\Skidmarks\WheelSkidmarks.cs" />
@@ -63,17 +64,17 @@
     <Compile Include="Assets\Scripts\MainMenuManager.cs" />
     <Compile Include="Assets\Scripts\OnTriggerCallToggleQuestion.cs" />
     <Compile Include="Assets\Scripts\DirectionalArrow.cs" />
-    <Compile Include="Assets\SpecialCheckPoint.cs" />
+    <Compile Include="Assets\Scripts\SpecialCheckPoint.cs" />
     <Compile Include="Assets\Scripts\GizmoObject.cs" />
-    <Compile Include="Assets\video.cs" />
+    <Compile Include="Assets\Scripts\video.cs" />
     <Compile Include="Assets\Scripts\RaceController.cs" />
-    <Compile Include="Assets\OnMouseOver.cs" />
+    <Compile Include="Assets\Scripts\OnMouseOver.cs" />
     <Compile Include="Assets\Scripts\BikeSwitch.cs" />
     <Compile Include="Assets\WebGLSupport\WebGLInput\Mobile\WebGLInputMobile.cs" />
     <Compile Include="Assets\Scripts\BikeCamera.cs" />
     <Compile Include="Assets\WebGLSupport\WebGLInput\Wrapper\WrappedTMPInputField.cs" />
     <Compile Include="Assets\Scripts\OnLineVideoLoader.cs" />
-    <Compile Include="Assets\DayNightTransition.cs" />
+    <Compile Include="Assets\Scripts\DayNightTransition.cs" />
     <Compile Include="Assets\Scripts\BikeControl.cs" />
     <Compile Include="Assets\Scripts\BikeAnimation.cs" />
     <Compile Include="Assets\WebGLSupport\WebGLWindow\WebGLWindow.cs" />
@@ -83,7 +84,6 @@
     <Compile Include="Assets\Scripts\RandomCheckPoint.cs" />
     <Compile Include="Assets\Scripts\OnTriggerPlayerEnterSpecial.cs" />
     <Compile Include="Assets\WebGLSupport\WebGLInput\Detail\RebuildChecker.cs" />
-    <Compile Include="Assets\MobileUIAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
