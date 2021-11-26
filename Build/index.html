@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>O segredo de Dakar</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>OSegredoDeDakar</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <link rel="stylesheet" href="TemplateData/style.css" />
   </head>
   <style>
-    @media screen and (min-width: 769px){
-      .info_mobile{
+    @media screen and (min-width: 769px) {
+      .info_mobile {
         display: none;
-        color: aqua; 
+        color: aqua;
         justify-content: center;
         align-content: center;
         text-align: center;
@@ -23,19 +26,29 @@
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
     </div>
-    <div id="loading-cover" style="display:none;">
+    <div id="loading-cover" style="display: none">
       <div id="unity-loading-bar">
-        <div id="unity-logo"><img src="logo.png"></div>
-        <div id="unity-progress-bar-empty" style="display: none;">
+        <div id="unity-logo"><img src="logo.png" /></div>
+        <div id="unity-progress-bar-empty" style="display: none">
           <div id="unity-progress-bar-full"></div>
         </div>
         <div class="spinner"></div>
-        <div class="info_mobile" style="color: white; justify-content: center; align-content: center; text-align: center; font-size: 18px; font-weight:lighter;">
+        <div
+          class="info_mobile"
+          style="
+            color: white;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            font-size: 18px;
+            font-weight: lighter;
+          "
+        >
           <p>Para uma melhor performance utilize em modo paisagem.</p>
         </div>
       </div>
     </div>
-    <div id="unity-fullscreen-button" style="display: none;"></div>
+    <div id="unity-fullscreen-button" style="display: none"></div>
     <script>
       const hideFullScreenButton = "";
       const buildUrl = "Build";
@@ -53,30 +66,36 @@
       const container = document.querySelector("#unity-container");
       const canvas = document.querySelector("#unity-canvas");
       const loadingCover = document.querySelector("#loading-cover");
-      const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
-      const progressBarFull = document.querySelector("#unity-progress-bar-full");
-      const fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      const spinner = document.querySelector('.spinner');
+      const progressBarEmpty = document.querySelector(
+        "#unity-progress-bar-empty"
+      );
+      const progressBarFull = document.querySelector(
+        "#unity-progress-bar-full"
+      );
+      const fullscreenButton = document.querySelector(
+        "#unity-fullscreen-button"
+      );
+      const spinner = document.querySelector(".spinner");
 
-      const canFullscreen = (function() {
+      const canFullscreen = (function () {
         for (const key of [
-            'exitFullscreen',
-            'webkitExitFullscreen',
-            'webkitCancelFullScreen',
-            'mozCancelFullScreen',
-            'msExitFullscreen',
-          ]) {
+          "exitFullscreen",
+          "webkitExitFullscreen",
+          "webkitCancelFullScreen",
+          "mozCancelFullScreen",
+          "msExitFullscreen",
+        ]) {
           if (key in document) {
             return true;
           }
         }
         return false;
-      }());
+      })();
 
-       if (/iPhone|iPad/i.test(navigator.userAgent)) {
+      if (/iPhone|iPad/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
-      } 
+      }
       loadingCover.style.display = "";
 
       const script = document.createElement("script");
@@ -86,9 +105,10 @@
           spinner.style.display = "none";
           progressBarEmpty.style.display = "";
           progressBarFull.style.width = `${100 * progress}%`;
-        }).then((unityInstance) => {
-          loadingCover.style.display = "none";
-          /* if (canFullscreen) {
+        })
+          .then((unityInstance) => {
+            loadingCover.style.display = "none";
+            /* if (canFullscreen) {
             if (!hideFullScreenButton) {
               fullscreenButton.style.display = "";
             }
@@ -96,9 +116,10 @@
               unityInstance.SetFullscreen(1);
             };
           } */
-        }).catch((message) => {
-          alert(message);
-        });
+          })
+          .catch((message) => {
+            alert(message);
+          });
       };
       document.body.appendChild(script);
     </script>
