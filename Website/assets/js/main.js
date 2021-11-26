@@ -17,8 +17,6 @@ pageNavLinks.forEach((pageNavLink) => {
 		//console.log(target);
 		
         document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
-
 		
     });
-	
 });
