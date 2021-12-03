@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\RandomCheckPoint.cs" />
     <Compile Include="Assets\Scripts\OnTriggerPlayerEnterSpecial.cs" />
     <Compile Include="Assets\WebGLSupport\WebGLInput\Detail\RebuildChecker.cs" />
+    <Compile Include="Assets\desktopOnly.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
